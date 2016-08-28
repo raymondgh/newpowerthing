@@ -100,6 +100,51 @@
 </div>
 </div>
 </div>
+
+<script>
+
+    var pubnub = new PubNub({
+        subscribeKey: "sub-c-cbf1439a-6cf1-11e6-9259-0619f8945a4f",
+        publishKey: "pub-c-2694ba43-a08d-4d5d-a9fa-8f5beb6cc869",
+        logVerbosity: true,
+        uuid: "web_user",
+        ssl: true,
+        presenceTimeout: 130,
+    });
+
+    pubnub.subscribe({
+        channels: ['jobtracker'],
+        withPresence: true // also subscribe to presence instances.
+    });
+
+
+    var data = {
+        status: 'paid',
+        customerId: 3
+    }
+
+    // push is not working for some certificate reason...
+    var pn_apns = {
+    aps: {
+      sound: "default",
+      alert: "CHA-CHING",
+      badge: 1
+    }
+  }
+  
+    pubnub.publish(
+    {
+        message: { data, pn_apns },
+        channel: 'jobtracker',
+        sendByPost: false, // true to send via post
+        storeInHistory: false, //override default storage options
+    },
+    function (status, response) {
+        // handle status, response
+        console.log("publish something");
+    }
+    );
+</script>
 </body>
   <style>
   
