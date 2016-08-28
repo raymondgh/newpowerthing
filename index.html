@@ -48,13 +48,25 @@
     	<script type="text/javascript"
         src="https://www.simplify.com/commerce/simplify.pay.js"></script>
 <button data-sc-key="sbpb_NWNlZWU4YzgtNjQ3Yy00Yzg1LTk5YTEtMTRhZmU0MjJiYzUy"
-        data-name="Jack&#39;s Plumbing"
+        data-name="Jacks Plumbing"
         data-description="Service on 28 August 2016"
         data-reference="99999"
         data-amount="29000"
         data-color="#12B830">
         Buy Now
 </button>
+
+<script>
+    SimplifyCommerce.hostedPayments(
+        function(response) {
+            // response handler
+        },
+        {
+            scKey: "YOUR_HOSTED_PAYMENTS_ENABLED_PUBLIC_KEY",
+            color: "#12B830"
+        }
+    );
+</script>
 
 
     </div>
