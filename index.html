@@ -4,20 +4,149 @@
 
 </head>
 <body>
-  <div>
-  	<div id="page-title">page title</div>
-  	<div id="header">header</div>
-    <div id="body">body</div>
+  <div id="big-div">
+  	<div id="page-title">Workflow</div>
+  	<div id="business-info">
+      <div id="business-name">Jack's Plumbing</div>
+      <div id="business-address">55 Hawthorne, San Francisco, CA 94105</div>
+      <div id="business-number">415-525-8340</div>
+    </div>
+    <div id="timeline">
+
+    	<div class="timeline-item">
+    		<div class="left-half">left </div>
+    		<div class="right-half">
+    			<div class="top-half">top</div>
+    			<div class="bottom-half">bottom</div>
+    		</div>
+    	</div>
+
+    	    	<div class="timeline-item">
+    		<div class="left-half">left </div>
+    		<div class="right-half">
+    			<div class="top-half">top</div>
+    			<div class="bottom-half">bottom</div>
+    		</div>
+    	</div>
+
+    	    	<div class="timeline-item">
+    		<div class="left-half">left </div>
+    		<div class="right-half">
+    			<div class="top-half">top</div>
+    			<div class="bottom-half">bottom</div>
+    		</div>
+    	</div>
+
+    	    	<div class="timeline-item">
+    		<div class="left-half">left </div>
+    		<div class="right-half">
+    			<div class="top-half">top</div>
+    			<div class="bottom-half">bottom</div>
+    		</div>
+    	</div>
+
+
+    </div>
   </div>
 </body>
-  
   <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    #big-div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
     #page-title {
-    	color: blue;
+    	display: flex;
+    	justify-content: center;
+    	align-items: center;
+    	color: white;
+     	height: 10%;
+     	width: 100%;
+     	background-color: #8f35ff;
+     	font-size: 120%;
+    }
+    #business-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 8%;
+      width: 100%;
+      align-items: flex-start;
+      background-color: red;
+          }
+    
+    #business-name {
+    	display:flex;
+      font-size: 120%;
+      height: 45%;
+     	background-color: green;
+     	align-items: flex-end;
+     	margin-left: 2%;
     }
     
+    #business-address {
+      font-size: 80%;
+      height: 25%;
+     	background-color: orange;
+     	     	margin-left: 2%;
+
+    }
+    
+    #business-number {
+      font-size: 80%;
+      height: 25%;
+     	background-color: yellow;
+     	     	margin-left: 2%;
+
+    }
+    
+    #timeline {
+    	display: flex;
+    	flex-direction: column;
+    	width: 100%;
+    	height: 82%;
+    	background-color: #33ff33;
+    }
+
+
+    .timeline-item {
+    	display:flex;
+    	flex-direction: row;
+		color: blue;
+		background-color: #888888;
+		width: 100%;
+		height: 75px;
+    }
+
+    .left-half {
+    	display: flex;
+    	background-color: #333333;
+    	width: 25%;
+    	justify-content: center;
+    	align-items: center;
+    }
+
+    .right-half {
+    	background-color: #666666;
+    	width: 75%;
+    }
+
+    .top-half {
+    	background-color: #aaaaaa;
+    	height: 50%;
+    }
+
+    .bottom-half {
+    	background-color: #cccccc;
+    	height: 50%;
+    }
+
+
+    
   </style>
-  
-  
-  
 </html>
