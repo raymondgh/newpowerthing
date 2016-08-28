@@ -121,7 +121,7 @@
 
     var data = {
         status: 'paid',
-        customerId: 3
+        customerId: 2
     }
 
     // push is not working for some certificate reason...
@@ -132,7 +132,7 @@
       badge: 1
     }
   }
-  
+
     pubnub.publish(
     {
         message: { data, pn_apns },
